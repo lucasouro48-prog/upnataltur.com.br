@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Galeria • CÉU E MAR</title>
+<title>Galeria • UP Experiencie Natal</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -14,9 +14,7 @@
   --dark2:#0f172a;
   --text:#e5e7eb;
 }
-
 *{box-sizing:border-box}
-
 body{
   margin:0;
   font-family:Segoe UI, Arial, sans-serif;
@@ -24,7 +22,7 @@ body{
   color:var(--text);
 }
 
-/* HEADER + MENU */
+/* HEADER */
 header{
   position:fixed;
   top:0;
@@ -32,7 +30,6 @@ header{
   background:rgba(2,6,23,.95);
   z-index:999;
 }
-
 .header-container{
   max-width:1200px;
   margin:auto;
@@ -41,26 +38,20 @@ header{
   justify-content:space-between;
   align-items:center;
 }
-
 .brand{
   font-size:22px;
   font-weight:800;
-  letter-spacing:1px;
 }
-.brand span:first-child{color:#fff;}
-.brand span:last-child{color:var(--primary);}
+.brand span:first-child{color:#fff}
+.brand span:last-child{color:var(--primary)}
 
-nav{
-  display:flex;
-  gap:25px;
-}
-
+nav{display:flex;gap:25px}
 nav a{
   color:#fff;
   text-decoration:none;
   font-weight:500;
 }
-nav a:hover{color:var(--primary);}
+nav a:hover{color:var(--primary)}
 
 .menu-toggle{
   display:none;
@@ -68,8 +59,7 @@ nav a:hover{color:var(--primary);}
   cursor:pointer;
 }
 .menu-toggle span{
-  width:26px;
-  height:3px;
+  width:26px;height:3px;
   background:#fff;
   margin:4px 0;
 }
@@ -84,10 +74,10 @@ nav a:hover{color:var(--primary);}
   background-attachment:fixed;
   padding:120px 40px;
 }
-.hero h1{font-size:3rem;color:#fff;}
+.hero h1{font-size:3rem;color:#fff}
 .hero p{max-width:600px;color:#cbd5f5}
 
-/* FILTROS */
+/* FILTERS */
 .filters{
   display:flex;
   justify-content:center;
@@ -116,7 +106,6 @@ nav a:hover{color:var(--primary);}
   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
   gap:30px;
 }
-
 .item{
   background:var(--dark2);
   border-radius:20px;
@@ -127,7 +116,6 @@ nav a:hover{color:var(--primary);}
   transition:.6s;
 }
 .item.show{opacity:1;transform:translateY(0)}
-
 .item img{
   width:100%;
   height:220px;
@@ -180,8 +168,7 @@ nav a:hover{color:var(--primary);}
 .float{
   position:fixed;
   right:20px;
-  width:55px;
-  height:55px;
+  width:55px;height:55px;
   border-radius:50%;
   display:flex;
   align-items:center;
@@ -225,15 +212,14 @@ footer{
 
 <body>
 
-<a href="https://wa.me/5558499638395" class="float whatsapp"><i class="fab fa-whatsapp"></i></a>
-<a href="tel:+558499638395" class="float phone"><i class="fas fa-phone"></i></a>
+<a href="https://wa.me/5584999999999" class="float whatsapp"><i class="fab fa-whatsapp"></i></a>
+<a href="tel:+5584999999999" class="float phone"><i class="fas fa-phone"></i></a>
 
 <header>
   <div class="header-container">
-    <div class="brand">
-      <span>UP</span> <span>Experiencie Natal</span>
-    </div>
-    <nav>
+    <div class="brand"><span>UP</span> <span>Experiencie Natal</span></div>
+    <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
+    <nav id="menu">
       <a href="index.html">Início</a>
       <a href="passeios.html">Passeios</a>
       <a href="galeria.html">Galeria</a>
@@ -244,13 +230,13 @@ footer{
 
 <section class="hero">
   <h1>Galeria de Experiências</h1>
-  <p>Destinos incríveis com conforto, segurança e atendimento premium.</p>
+  <p>Os passeios mais desejados do Rio Grande do Norte.</p>
 </section>
 
 <div class="filters">
-  <button class="active" onclick="filter('all')">Todos</button>
-  <button onclick="filter('praia')">Praias</button>
-  <button onclick="filter('natureza')">Natureza</button>
+  <button class="active" onclick="filter('all',this)">Todos</button>
+  <button onclick="filter('praia',this)">Praias</button>
+  <button onclick="filter('natureza',this)">Natureza</button>
 </div>
 
 <section class="section">
@@ -258,131 +244,100 @@ footer{
 
 <!-- PIPA -->
 <div class="item praia">
-  <img src="https://fcf51e9cb1.clvaw-cdnwnd.com/22d6f83774c3e261d0bcb7364e77ab83/200004231-b2368b236b/praia%20da%20Pipa-1.jpeg" onclick="openModal(this)">
-  <div class="card-content">
-    <h3>Complexo Pipa</h3>
-    <p>Falésias, mirantes, Praia do Amor e centro turístico.</p>
-    <div class="rating">★★★★★ 4.9 (128 avaliações)</div>
-    <div class="card-actions">
-      <a class="btn-whats" href="https://wa.me/5584999999999?text=Olá! Quero reservar o passeio *Complexo Pipa*">Reservar</a>
-      <a class="btn-map" href="https://maps.google.com/?q=Pipa+RN" target="_blank">Mapa</a>
-    </div>
-  </div>
+<img src="https://fcf51e9cb1.clvaw-cdnwnd.com/22d6f83774c3e261d0bcb7364e77ab83/200004231-b2368b236b/praia%20da%20Pipa-1.jpeg" onclick="openModal(this)">
+<div class="card-content">
+<h3>Complexo Pipa</h3>
+<p>Falésias, mirantes, Praia do Amor e vila charmosa.</p>
+<div class="rating">★★★★★ 4.9 (128 avaliações)</div>
+<div class="card-actions">
+<a class="btn-whats" href="https://wa.me/5584999999999?text=Quero reservar Complexo Pipa">Reservar</a>
+<a class="btn-map" href="https://maps.google.com/?q=Pipa+RN" target="_blank">Mapa</a>
+</div>
+</div>
 </div>
 
 <!-- GALINHOS -->
 <div class="item praia">
-  <img src="https://www.natalpraias.com.br/wp-content/uploads/2015/09/Galinhos-RN-BRASIL.jpg" onclick="openModal(this)">
-  <div class="card-content">
-    <h3>Galinhos</h3>
-    <p>Passeio de barco, dunas, salinas e vila charmosa.</p>
-    <div class="rating">★★★★★ 4.8 (97 avaliações)</div>
-    <div class="card-actions">
-      <a class="btn-whats" href="https://wa.me/5584999999999?text=Olá! Quero reservar o passeio *Galinhos*">Reservar</a>
-      <a class="btn-map" href="https://maps.google.com/?q=Galinhos+RN" target="_blank">Mapa</a>
-    </div>
-  </div>
+<img src="https://www.natalpraias.com.br/wp-content/uploads/2015/09/Galinhos-RN-BRASIL.jpg" onclick="openModal(this)">
+<div class="card-content">
+<h3>Galinhos</h3>
+<p>Passeio de barco, dunas e vila rústica.</p>
+<div class="rating">★★★★★ 4.8 (97 avaliações)</div>
+<div class="card-actions">
+<a class="btn-whats" href="https://wa.me/5584999999999?text=Quero reservar Galinhos">Reservar</a>
+<a class="btn-map" href="https://maps.google.com/?q=Galinhos+RN" target="_blank">Mapa</a>
+</div>
+</div>
+</div>
+
+<!-- MARACAJAÚ -->
+<div class="item natureza">
+<img src="https://tse3.mm.bing.net/th/id/OIP.9K0eO2bfx2CUmix-8lLfgAHaEq" onclick="openModal(this)">
+<div class="card-content">
+<h3>Maracajaú</h3>
+<p>Piscinas naturais e snorkel.</p>
+<div class="rating">★★★★★ 5.0 (143 avaliações)</div>
+<div class="card-actions">
+<a class="btn-whats" href="https://wa.me/5584999999999?text=Quero reservar Maracajau">Reservar</a>
+<a class="btn-map" href="https://maps.google.com/?q=Maracajau+RN" target="_blank">Mapa</a>
+</div>
+</div>
 </div>
 
 <!-- RIO DO FOGO -->
 <div class="item natureza">
-  <img src="WhatsApp Image 2025-12-26 at 12.15.06.jpeg" onclick="openModal(this)">
-  <div class="card-content">
-    <h3>Rio do Fogo — Parrachos</h3>
-    <p>
-      Piscinas naturais de águas cristalinas, ideal para mergulho com snorkel
-      e um dos passeios mais elogiados do litoral norte do RN.
-    </p>
-    <div class="rating">★★★★★ 4.9 (118 avaliações)</div>
-    <div class="card-actions">
-      <a class="btn-whats" href="https://wa.me/5584999999999?text=Olá! Quero reservar o passeio *Rio do Fogo — Parrachos*">
-        Reservar
-      </a>
-      <a class="btn-map" href="https://maps.google.com/?q=Rio+do+Fogo+RN" target="_blank">
-        Mapa
-      </a>
-    </div>
-  </div>
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" onclick="openModal(this)">
+<div class="card-content">
+<h3>Rio do Fogo — Parrachos</h3>
+<p>Piscinas naturais cristalinas e mergulho.</p>
+<div class="rating">★★★★★ 4.9 (118 avaliações)</div>
+<div class="card-actions">
+<a class="btn-whats" href="https://wa.me/5584999999999?text=Quero reservar Rio do Fogo">Reservar</a>
+<a class="btn-map" href="https://maps.google.com/?q=Rio+do+Fogo+RN" target="_blank">Mapa</a>
+</div>
+</div>
 </div>
 
-
-<!-- MARACAJAÚ -->
+<!-- GENIPABU -->
 <div class="item natureza">
-  <img src="https://tse3.mm.bing.net/th/id/OIP.9K0eO2bfx2CUmix-8lLfgAHaEq" onclick="openModal(this)">
-  <div class="card-content">
-    <h3>Maracajaú</h3>
-    <p>Piscinas naturais, snorkel e águas cristalinas.</p>
-    <div class="rating">★★★★★ 5.0 (143 avaliações)</div>
-    <div class="card-actions">
-      <a class="btn-whats" href="https://wa.me/5584999999999?text=Olá! Quero reservar o passeio *Maracajaú*">Reservar</a>
-      <a class="btn-map" href="https://maps.google.com/?q=Maracajau+RN" target="_blank">Mapa</a>
-    </div>
-  </div>
+<img src="https://cache.quantocustaviajar.com/blog/wp-content/uploads/2018/12/dunas-de-genipabu-1.jpg" onclick="openModal(this)">
+<div class="card-content">
+<h3>Dunas de Genipabu</h3>
+<p>Buggy, lagoas e emoção.</p>
+<div class="rating">★★★★★ 5.0 (212 avaliações)</div>
+<div class="card-actions">
+<a class="btn-whats" href="https://wa.me/5584999999999?text=Quero reservar Genipabu">Reservar</a>
+<a class="btn-map" href="https://maps.google.com/?q=Genipabu+RN" target="_blank">Mapa</a>
+</div>
+</div>
 </div>
 
- <div class="item praia">
-  <img src="https://emalgumlugardomundo.com.br/wp-content/uploads/2022/11/barra-do-cunhau-natal-8.jpg" onclick="openModal(this)">
-  <div class="card-content">
-    <h3>Barra do Cunhaú</h3>
-    <p>Encontro do rio com o mar, passeio de lancha e praias tranquilas.</p>
-    <div class="rating">★★★★★ 4.9 (86 avaliações)</div>
-    <div class="card-actions">
-      <a class="btn-whats" href="https://wa.me/5584999999999?text=Olá! Quero reservar o passeio *Barra do Cunhaú*">Reservar</a>
-      <a class="btn-map" href="https://maps.google.com/?q=Barra+do+Cunhau+RN" target="_blank">Mapa</a>
-    </div>
-  </div>
-</div>
-
-<div class="item natureza">
-  <img src="https://cache.quantocustaviajar.com/blog/wp-content/uploads/2018/12/dunas-de-genipabu-1.jpg" onclick="openModal(this)">
-  <div class="card-content">
-    <h3>Dunas de Genipabu</h3>
-    <p>Buggy, emoção com ou sem aventura, lagoas e dunas móveis.</p>
-    <div class="rating">★★★★★ 5.0 (212 avaliações)</div>
-    <div class="card-actions">
-      <a class="btn-whats" href="https://wa.me/5584999999999?text=Olá! Quero reservar o passeio *Dunas de Genipabu*">Reservar</a>
-      <a class="btn-map" href="https://maps.google.com/?q=Genipabu+RN" target="_blank">Mapa</a>
-    </div>
-  </div>
-</div>
-
+<!-- BARRA DO CUNHAÚ -->
 <div class="item praia">
-  <img src="https://tse3.mm.bing.net/th/id/OIP.YnDGA7qmZGuABPlUeSyZyAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" onclick="openModal(this)">
-  <div class="card-content">
-    <h3>Camurupim</h3>
-    <p>Piscinas naturais, águas calmas e excelente para famílias.</p>
-    <div class="rating">★★★★★ 4.7 (74 avaliações)</div>
-    <div class="card-actions">
-      <a class="btn-whats" href="https://wa.me/5584999999999?text=Olá! Quero reservar o passeio *Camurupim*">Reservar</a>
-      <a class="btn-map" href="https://maps.google.com/?q=Camurupim+RN" target="_blank">Mapa</a>
-    </div>
-  </div>
+<img src="https://emalgumlugardomundo.com.br/wp-content/uploads/2022/11/barra-do-cunhau-natal-8.jpg" onclick="openModal(this)">
+<div class="card-content">
+<h3>Barra do Cunhaú</h3>
+<p>Encontro do rio com o mar.</p>
+<div class="rating">★★★★★ 4.9 (86 avaliações)</div>
+<div class="card-actions">
+<a class="btn-whats" href="https://wa.me/5584999999999?text=Quero reservar Barra do Cunhau">Reservar</a>
+<a class="btn-map" href="https://maps.google.com/?q=Barra+do+Cunhau+RN" target="_blank">Mapa</a>
+</div>
+</div>
 </div>
 
+<!-- SÃO MIGUEL -->
 <div class="item praia">
-  <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/e3/d8/5f/praia-de-ponta-negra.jpg?w=300&h=300&s=1" onclick="openModal(this)">
-  <div class="card-content">
-    <h3>Pitangi do Norte</h3>
-    <p>Praia rústica, barracas tradicionais e visual paradisíaco.</p>
-    <div class="rating">★★★★★ 4.8 (63 avaliações)</div>
-    <div class="card-actions">
-      <a class="btn-whats" href="https://wa.me/5584999999999?text=Olá! Quero reservar o passeio *Pitangi do Norte*">Reservar</a>
-      <a class="btn-map" href="https://maps.google.com/?q=Pitangi+do+Norte+RN" target="_blank">Mapa</a>
-    </div>
-  </div>
+<img src="https://www.mundoviajante.com/wp-content/uploads/2024/01/praias_sao_miguel_do_gostoso.jpeg" onclick="openModal(this)">
+<div class="card-content">
+<h3>São Miguel do Gostoso</h3>
+<p>Praias tranquilas e pôr do sol.</p>
+<div class="rating">★★★★★ 4.9 (102 avaliações)</div>
+<div class="card-actions">
+<a class="btn-whats" href="https://wa.me/5584999999999?text=Quero reservar São Miguel do Gostoso">Reservar</a>
+<a class="btn-map" href="https://maps.google.com/?q=São+Miguel+do+Gostoso+RN" target="_blank">Mapa</a>
 </div>
-
-<div class="item praia">
-  <img src="https://www.mundoviajante.com/wp-content/uploads/2024/01/praias_sao_miguel_do_gostoso.jpeg" onclick="openModal(this)">
-  <div class="card-content">
-    <h3>São Miguel do Gostoso</h3>
-    <p>Destino charmoso, praias tranquilas e pôr do sol incrível.</p>
-    <div class="rating">★★★★★ 4.9 (102 avaliações)</div>
-    <div class="card-actions">
-      <a class="btn-whats" href="https://wa.me/5584999999999?text=Olá! Quero reservar o passeio *São Miguel do Gostoso*">Reservar</a>
-      <a class="btn-map" href="https://maps.google.com/?q=São+Miguel+do+Gostoso+RN" target="_blank">Mapa</a>
-    </div>
-  </div>
+</div>
 </div>
 
 </div>
@@ -393,7 +348,7 @@ footer{
 </div>
 
 <footer>
-   © 2026 UP Experiencie NATAL • Todos os direitos reservados
+© 2026 UP Experiencie Natal • Todos os direitos reservados
 </footer>
 
 <script>
