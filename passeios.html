@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Passeios • CÉU E MAR</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+  --primary:#fbbf24;
+  --dark:#020617;
+  --dark2:#0f172a;
+  --text:#e5e7eb;
+}
+
+body{
+  margin:0;
+  font-family:Segoe UI, Arial, sans-serif;
+  background:var(--dark);
+  color:var(--text);
+}
+
+/* MENU */
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#020617;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.brand{
+  font-size:22px;
+  font-weight:800;
+  color:var(--primary);
+}
+
+nav{
+  display:flex;
+  gap:25px;
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:500;
+}
+nav a:hover{color:var(--primary);}
+
+.menu-toggle{
+  display:none;
+  flex-direction:column;
+  cursor:pointer;
+}
+.menu-toggle span{
+  width:26px;
+  height:3px;
+  background:#fff;
+  margin:4px 0;
+}
+
+/* HERO */
+.hero{
+  background:
+    linear-gradient(to right, rgba(2,6,23,.85), rgba(2,6,23,.4)),
+    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
+  background-size:cover;
+  background-attachment:fixed;
+  padding:100px 40px;
+}
+.hero h1{font-size:3rem;color:#fff;}
+.hero p{max-width:650px;color:#cbd5f5;font-size:1.1rem;}
+
+/* PASSEIOS */
+.section{padding:70px 40px;}
+
+.tour{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  margin-bottom:60px;
+  background:var(--dark2);
+  border-radius:22px;
+  padding:35px;
+  border:1px solid rgba(255,255,255,.05);
+}
+
+.tour img{
+  width:100%;
+  border-radius:18px;
+}
+
+.tour h2{margin-top:0;color:#fff;}
+.tour p{color:#cbd5f5;}
+
+.tour ul{
+  padding-left:20px;
+  margin:20px 0;
+}
+.tour ul li{margin-bottom:8px;}
+
+.btn{
+  background:var(--primary);
+  color:#020617;
+  padding:14px 30px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+  display:inline-block;
+}
+
+/* FLOAT */
+.float{
+  position:fixed;
+  right:20px;
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-size:26px;
+  text-decoration:none;
+  z-index:999;
+}
+.whatsapp{bottom:90px;background:#25d366;}
+.phone{bottom:20px;background:#2563eb;}
+
+footer{
+  background:#020617;
+  text-align:center;
+  padding:30px;
+  color:#94a3b8;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .menu-toggle{display:flex;}
+  nav{
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:#020617;
+    flex-direction:column;
+    align-items:center;
+    display:none;
+    padding:20px 0;
+  }
+  nav.active{display:flex;}
+  nav a{padding:12px 0;font-size:18px;}
+  .tour{grid-template-columns:1fr;}
+  .hero h1{font-size:2.2rem;}
+}
+</style>
+</head>
+
+<body>
+
+<a href="https://wa.me/558499638395" class="float whatsapp"><i class="fab fa-whatsapp"></i></a>
+<a href="tel:+558499638395" class="float phone"><i class="fas fa-phone"></i></a>
+
+<header>
+  <div class="brand"><span>UP</span> <span>Experiencie Natal</span></div>
+  <div class="menu-toggle" id="menuToggle">
+    <span></span><span></span><span></span>
+  </div>
+
+  <nav id="menu">
+    <a href="index.html">Início</a>
+    <a href="passeios.html">Passeios</a>
+    <a href="galeria.html">Galeria</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Passeios Exclusivos</h1>
+  <p>Os mesmos destinos da nossa galeria, com conforto, segurança e experiência premium.</p>
+</section>
+
+<section class="section">
+
+<!-- SÃO MIGUEL DO GOSTOSO -->
+<div class="tour">
+<img src="https://www.mundoviajante.com/wp-content/uploads/2024/01/praias_sao_miguel_do_gostoso.jpeg">
+<div>
+<h2>São Miguel do Gostoso</h2>
+<p>Praias paradisíacas, vila charmosa e clima perfeito para relaxar.</p>
+<ul>
+<li>✔ Centro da vila</li>
+<li>✔ Praia de Tourinhos</li>
+<li>✔ Transporte executivo</li>
+</ul>
+<a class="btn" href="https://wa.me/558499638395?text=Quero reservar São Miguel do Gostoso">Reservar</a>
+</div>
+</div>
+
+<!-- PIPA -->
+<div class="tour">
+<img src="https://tse2.mm.bing.net/th/id/OIP.qEd3c0-DQ1rb1r8-smwHcQHaEK">
+<div>
+<h2>Complexo Pipa</h2>
+<p>Falésias, mirantes, praias e o charme da vila.</p>
+<ul>
+<li>✔ Praia do Amor</li>
+<li>✔ Chapadão</li>
+<li>✔ Centro de Pipa</li>
+</ul>
+<a class="btn" href="https://wa.me/558499638395?text=Quero reservar Complexo Pipa">Reservar</a>
+</div>
+</div>
+
+<!-- GALINHOS -->
+<div class="tour">
+<img src="https://www.natalpraias.com.br/wp-content/uploads/2015/09/Galinhos-RN-BRASIL.jpg">
+<div>
+<h2>Galinhos</h2>
+<p>Vila rústica com dunas, salinas e passeio de barco.</p>
+<ul>
+<li>✔ Passeio de barco</li>
+<li>✔ Dunas</li>
+<li>✔ Transporte executivo</li>
+</ul>
+<a class="btn" href="https://wa.me/5584999999999?text=Quero reservar Galinhos">Reservar</a>
+</div>
+</div>
+
+<!-- GENIPABU -->
+<div class="tour">
+<img src="https://cache.quantocustaviajar.com/blog/wp-content/uploads/2018/12/dunas-de-genipabu-1.jpg">
+<div>
+<h2>Buggy em Genipabu</h2>
+<p>Dunas, lagoas e muita emoção.</p>
+<ul>
+<li>✔ Buggy até 4 pessoas</li>
+<li>✔ Lagoas</li>
+<li>✔ Guia motorista</li>
+</ul>
+<a class="btn" href="https://wa.me/558499638395?text=Quero reservar Buggy em Genipabu">Reservar</a>
+</div>
+</div>
+
+<!-- RIO DO FOGO -->
+<div class="tour">
+  <img src="WhatsApp Image 2025-12-26 at 12.15.06.jpeg">
+  <div>
+    <h2>Rio do Fogo — Parrachos</h2>
+    <p>
+      Conheça os famosos <strong>Parrachos de Rio do Fogo</strong>, com águas cristalinas,
+      piscinas naturais e um dos melhores pontos para mergulho do Rio Grande do Norte.
+      Ideal para famílias e amantes do mar.
+    </p>
+    <ul>
+      <li>✔ Piscinas naturais</li>
+      <li>✔ Mergulho com snorkel</li>
+      <li>✔ Catamarã ou lancha</li>
+    </ul>
+    <a class="btn" href="https://wa.me/558499638395?text=Quero reservar Rio do Fogo — Parrachos">
+      Reservar
+    </a>
+  </div>
+</div>
+
+
+<!-- MARACAJAÚ -->
+<div class="tour">
+<img src="https://tse3.mm.bing.net/th/id/OIP.9K0eO2bfx2CUmix-8lLfgAHaEq">
+<div>
+<h2>Maracajaú — Parrachos</h2>
+<p>Piscinas naturais e mergulho com snorkel.</p>
+<ul>
+<li>✔ Catamarã</li>
+<li>✔ Snorkel</li>
+<li>✔ Transporte executivo</li>
+</ul>
+<a class="btn" href="https://wa.me/558499638395?text=Quero reservar Maracajaú">Reservar</a>
+</div>
+</div>
+
+<!-- BARRA DO CUNHAÚ -->
+<div class="tour">
+<img src="https://emalgumlugardomundo.com.br/wp-content/uploads/2022/11/barra-do-cunhau-natal-8.jpg">
+<div>
+<h2>Barra do Cunhaú</h2>
+<p>Rio, mar e manguezais em um só lugar.</p>
+<ul>
+<li>✔ Passeio ecológico</li>
+<li>✔ Praia tranquila</li>
+<li>✔ Transporte executivo</li>
+</ul>
+<a class="btn" href="https://wa.me/558499638395?text=Quero reservar Barra do Cunhaú">Reservar</a>
+</div>
+</div>
+
+
+
+</section>
+
+<footer>
+ © 2026 UP Experiencie NATAL • Todos os direitos reservados
+</footer>
+
+<script>
+const toggle=document.getElementById("menuToggle");
+const menu=document.getElementById("menu");
+toggle.onclick=()=>menu.classList.toggle("active");
+</script>
+
+</body>
+</html>
