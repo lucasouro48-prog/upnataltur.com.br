@@ -397,28 +397,28 @@ footer{
 </footer>
 
 <script>
+const toggle=document.getElementById("menuToggle");
+const menu=document.getElementById("menu");
+toggle.onclick=()=>menu.classList.toggle("active");
+
 function openModal(img){
   modal.style.display="flex";
   modalImg.src=img.src;
 }
-function closeModal(){
-  modal.style.display="none";
-}
+function closeModal(){modal.style.display="none"}
 
-function filter(cat){
+function filter(cat,el){
   document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active'));
-  event.target.classList.add('active');
-
+  el.classList.add('active');
   document.querySelectorAll('.item').forEach(i=>{
-    i.style.display = (cat==="all" || i.classList.contains(cat)) ? "block":"none";
+    i.style.display=(cat==="all"||i.classList.contains(cat))?"block":"none";
   });
 }
 
-const items=document.querySelectorAll('.item');
 const obs=new IntersectionObserver(e=>{
-  e.forEach(x=>x.isIntersecting && x.target.classList.add("show"));
+  e.forEach(x=>x.isIntersecting&&x.target.classList.add("show"));
 },{threshold:.2});
-items.forEach(i=>obs.observe(i));
+document.querySelectorAll('.item').forEach(i=>obs.observe(i));
 </script>
 
 </body>
